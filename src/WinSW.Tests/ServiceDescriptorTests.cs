@@ -17,7 +17,7 @@ namespace WinSW.Tests
         private const string AllowServiceAccountLogonRight = "true";
 
         private readonly ITestOutputHelper output;
-        
+
         private ServiceDescriptor extendedServiceDescriptor;
 
         public ServiceDescriptorTests(ITestOutputHelper output)
