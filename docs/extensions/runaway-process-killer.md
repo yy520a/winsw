@@ -24,13 +24,13 @@ The extension can be configured via the [XML configuration file](../xml-config-f
   <log mode="roll"></log>
 
   <extensions>
-	<!-- This is a sample configuration for the RunawayProcessKiller extension. -->
-  <extension enabled="true" 
+  <!-- This is a sample configuration for the RunawayProcessKiller extension. -->
+  <extension enabled="true"
              className="winsw.Plugins.RunawayProcessKiller.RunawayProcessKillerExtension"
              id="killOnStartup">
       <!-- Absolute path to the PID file, which stores ID of the previously launched process. -->
       <pidfile>%BASE%\pid.txt</pidfile>
-      <!-- Defines the process termination timeout in milliseconds. 
+      <!-- Defines the process termination timeout in milliseconds.
            This timeout will be applied multiple times for each child process.
            After the timeout WinSW will try to force kill the process.
       -->
@@ -44,6 +44,6 @@ The extension can be configured via the [XML configuration file](../xml-config-f
 
 * The current implementation of the the extension checks only the root process (started executable)
 * If the runaway process is detected the entire, the entire process tree gets terminated
-* WinSW gives the runaway process a chance to the gracefully terminate. 
+* WinSW gives the runaway process a chance to the gracefully terminate.
 If it does not do it within the timeout, the process will be force-killed.
 * If the force kill fails, the WinSW startup continues with a warning.
