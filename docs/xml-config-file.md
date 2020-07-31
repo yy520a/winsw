@@ -144,6 +144,17 @@ The pre-stop command is executed when the service is stopping and before the mai
 
 The post-stop command is executed when the service is stopping and after the main process is stopped.
 
+### Preshutdown
+
+Gives the service more time to stop when the system is shutting down.
+
+```xml
+<preshutdown>true</preshutdown>
+<preshutdownTimeout>3 mins</preshutdownTimeout>
+```
+
+The system default preshutdown time-out value is 180,000 milliseconds (three minutes).
+
 ### stoptimeout
 
 When the service is requested to stop, winsw first attempts to send a Ctrl+C signal,
