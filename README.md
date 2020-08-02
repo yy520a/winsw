@@ -61,7 +61,7 @@ Experimental commands:
 
 | Command | Description |
 | ------- | ----------- |
-| dev ps  | Draws a process tree associated with the service. |
+| dev ps  | Draws the process tree associated with the service. |
 
 Most commands require Administrator privileges to execute. Since 2.8, WinSW will prompt for UAC in non-elevated sessions.
 
